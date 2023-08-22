@@ -7,7 +7,7 @@ public class Calculator {
         Scanner str = new Scanner(System.in);
         System.out.println("Input: ");
         String inputStr = str.nextLine();
-        System.out.println("\n" + "Output: ");
+        System.out.println("\n" + "Output: ");//
 
         String operatorStr = "";
         char[] symbol = new char[10];
