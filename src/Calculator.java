@@ -76,26 +76,6 @@ public class Calculator {
         }
     }
 
-    public static int calculate(int a, int b, char op) {
-        int result = 0;
-        switch (op) {
-            case '+':
-                result = a + b;
-                break;
-            case '-':
-                result = a - b;
-                break;
-            case '*':
-                result = a * b;
-                break;
-            case '/':
-                result = a / b;
-                break;
-            default:
-                break;
-        }
-        return result;
-    }
 
     public static String romanSolution(int arabic) {
         String[] romanChars = {"O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
@@ -159,6 +139,27 @@ public class Calculator {
         } else {
             return 0;
         }
+    }
+
+    public static int calculate(int a, int b, char op) {
+        int result = 0;
+        switch (op) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            case '/':
+                result = a / b;
+                break;
+            default:
+                break;
+        }
+        return result;
     }
 
 }
