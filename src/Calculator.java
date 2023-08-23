@@ -10,21 +10,22 @@ public class Calculator {
         System.out.println("\n" + "Output: ");//
 
         String operatorStr = "";
-        char[] symbol = new char[10];
+        char[] $ = new char[10];
         char operator = '+';
         for (int i=1; i < inputStr.length(); i++) {
 
-            symbol[i] = inputStr.charAt(i);
-            if (symbol[i] == '+'){
+            $[i] = inputStr.charAt(i);
+
+            if ($[i] == '+'){
                 operator = '+'; operatorStr = "\\+";
             }
-            if (symbol[i] == '-'){
+            if ($[i] == '-'){
                 operator = '-'; operatorStr = "-";
             }
-            if (symbol[i] == '*'){
+            if ($[i] == '*'){
                 operator = '*'; operatorStr = "\\*";
             }
-            if (symbol[i] == '/'){
+            if ($[i] == '/'){
                 operator = '/'; operatorStr = "/";
             }
         }
