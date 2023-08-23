@@ -9,24 +9,24 @@ public class Calculator {
         String inputStr = str.nextLine();
         System.out.println("\n" + "Output: ");//
 
-        String operatorStr = "";
-        char[] $ = new char[10];
+        String operatorStrOut = "";
+        char[] operatorStrIn = new char[10];
         char operator = '+';
         for (int i=1; i < inputStr.length(); i++) {
 
-            $[i] = inputStr.charAt(i);
+            operatorStrIn[i] = inputStr.charAt(i);
 
-            if ($[i] == '+'){
-                operator = '+'; operatorStr = "\\+";
+            if (operatorStrIn[i] == '+'){
+                operator = '+'; operatorStrOut = "\\+";
             }
-            if ($[i] == '-'){
-                operator = '-'; operatorStr = "-";
+            if (operatorStrIn[i] == '-'){
+                operator = '-'; operatorStrOut = "-";
             }
-            if ($[i] == '*'){
-                operator = '*'; operatorStr = "\\*";
+            if (operatorStrIn[i] == '*'){
+                operator = '*'; operatorStrOut = "\\*";
             }
-            if ($[i] == '/'){
-                operator = '/'; operatorStr = "/";
+            if (operatorStrIn[i] == '/'){
+                operator = '/'; operatorStrOut = "/";
             }
         }
 
@@ -35,7 +35,7 @@ public class Calculator {
         int result = 0;
         int resultArabic = 0;
 
-        String[] numbers = inputStr.split(operatorStr);
+        String[] numbers = inputStr.split(operatorStrOut);
         if (numbers.length > 2) {
             System.out.println("throws Exception");
             System.exit(0);
