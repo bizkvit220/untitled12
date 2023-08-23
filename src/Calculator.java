@@ -41,8 +41,8 @@ public class Calculator {
             System.exit(0);
         }
         try{
-            arg1 = romanNumber(numbers[0]);
-            arg2 = romanNumber(numbers[1]);
+            arg1 = romanConverter(numbers[0]);
+            arg2 = romanConverter(numbers[1]);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("throws Exception");
             System.exit(0);
@@ -97,7 +97,7 @@ public class Calculator {
     }
 
 
-    public static int romanNumber(String roman) {
+    public static int romanConverter(String roman) {
         if (roman.equals("I")) {
             return 1;
         } else if (roman.equals("i")) {
