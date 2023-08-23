@@ -12,19 +12,19 @@ public class Calculator {
         String operatorStr = "";
         char[] symbol = new char[10];
         char operator = '+';
-        for (int i1=1; i1 < inputStr.length(); i1++) {
+        for (int i=1; i < inputStr.length(); i++) {
 
-            symbol[i1] = inputStr.charAt(i1);
-            if (symbol[i1] == '+'){
+            symbol[i] = inputStr.charAt(i);
+            if (symbol[i] == '+'){
                 operator = '+'; operatorStr = "\\+";
             }
-            if (symbol[i1] == '-'){
+            if (symbol[i] == '-'){
                 operator = '-'; operatorStr = "-";
             }
-            if (symbol[i1] == '*'){
+            if (symbol[i] == '*'){
                 operator = '*'; operatorStr = "\\*";
             }
-            if (symbol[i1] == '/'){
+            if (symbol[i] == '/'){
                 operator = '/'; operatorStr = "/";
             }
         }
