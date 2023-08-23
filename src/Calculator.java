@@ -67,6 +67,7 @@ public class Calculator {
             try {
                 result = calculate(arg1, arg2, operator);
                 if (result == 0) {
+                    System.out.println("throws Exception");
                     System.exit(0);
                 }
                 String resultRoman = romanSolution(result);
