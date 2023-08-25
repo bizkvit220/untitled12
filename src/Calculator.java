@@ -20,6 +20,7 @@ public class Calculator {
         String operatorStrOut = "";
         char[] operatorStrIn = new char[10];
         char operator = '+';
+
         for (int i = 1; i < input.length(); i++) {
 
             operatorStrIn[i] = input.charAt(i);
