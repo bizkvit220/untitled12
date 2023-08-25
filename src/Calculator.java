@@ -59,7 +59,6 @@ public class Calculator {
         }
 
             if (arg1 == 0 && arg2 == 0) {
-                //result = 0;
 
                     arg1 = Integer.parseInt(numbers[0]);
                     arg2 = Integer.parseInt(numbers[1]);
