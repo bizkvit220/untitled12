@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Scanner str = new Scanner(System.in);
         System.out.println("Input: ");
@@ -11,12 +11,12 @@ public class Calculator {
         String result = calc(inputStr);
 
         System.out.println(result);
-        System.out.println("\n" + "Output: ");//
+        System.out.println("\n" + "Output: ");
 
 
     }
 
-    public static String calc(String input) {
+    public static String calc(String input) throws Exception {
         String operatorStrOut = "";
         char[] operatorStrIn = new char[10];
         char operator = '+';
@@ -49,13 +49,13 @@ public class Calculator {
 
         String[] numbers = input.split(operatorStrOut);
             if (numbers.length > 2) {
-                throw new RuntimeException("throws Exception //т.к. формат математической операции не удовлетворяет заданию");
+                throw new Exception("throws Exception //т.к. формат математической операции не удовлетворяет заданию");
         }
             if (numbers.length == 2) {
                 arg1 = romanConverter(numbers[0]);
                 arg2 = romanConverter(numbers[1]);
             } else {
-            throw new RuntimeException("throws Exception //т.к. строка не является математической операцией");
+            throw new Exception("throws Exception //т.к. строка не является математической операцией");
         }
 
             if (arg1 == 0 && arg2 == 0) {
@@ -63,7 +63,7 @@ public class Calculator {
                     arg1 = Integer.parseInt(numbers[0]);
                     arg2 = Integer.parseInt(numbers[1]);
                     if (arg1 > 10 | arg2 > 10 ) {
-                        throw new RuntimeException("throws Exception //т.к. один из аргументов больше 10");
+                        throw new Exception("throws Exception //т.к. один из аргументов больше 10");
                     }
                     resultArabic = calculate(arg1, arg2, operator);
                     return String.valueOf(resultArabic);
@@ -71,13 +71,13 @@ public class Calculator {
             } else if (arg1 == 0 && arg2 != 0 || arg1 != 0 && arg2 == 0) {
                 if (arg1 == 0 || arg2 == 0) {
                 }
-                throw new RuntimeException("throws Exception //т.к. используются одновременно разные системы счисления");
+                throw new Exception("throws Exception //т.к. используются одновременно разные системы счисления");
 
             } else {
 
                     result = calculate(arg1, arg2, operator);
                     if (result == 0 || result < 0) {
-                        throw new RuntimeException("throws Exception //т.к. в римской системе нет нуля и отрицательных чисел");
+                        throw new Exception("throws Exception //т.к. в римской системе нет нуля и отрицательных чисел");
                     }
                     String resultRoman = romanSolution(result);
                     return resultRoman;
