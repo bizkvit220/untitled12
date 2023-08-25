@@ -7,7 +7,9 @@ public class Calculator {
         Scanner str = new Scanner(System.in);
         System.out.println("Input: ");
         String inputStr = str.nextLine();
+
         String result = calc(inputStr);
+
         System.out.println(result);
         System.out.println("\n" + "Output: ");//
 
@@ -47,7 +49,7 @@ public class Calculator {
 
         String[] numbers = input.split(operatorStrOut);
         if (numbers.length > 2) {
-            throw new RuntimeException("throws Exception //т.к. формат математической операции не удовлетворяет заданию ");
+            throw new RuntimeException("throws Exception //т.к. формат математической операции не удовлетворяет заданию");
         }
         if (numbers.length == 2) {
             arg1 = romanConverter(numbers[0]);
