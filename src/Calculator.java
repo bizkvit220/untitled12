@@ -79,7 +79,6 @@ public class Calculator {
                     result = calculate(arg1, arg2, operator);
                     if (result == 0 || result < 0) {
                         throw new RuntimeException("throws Exception //т.к. результат не может быть отрицательным и не может равнятся нулю");
-
                     }
                     String resultRoman = romanSolution(result);
                     return resultRoman;
