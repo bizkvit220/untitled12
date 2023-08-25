@@ -48,18 +48,18 @@ public class Calculator {
         int resultArabic = 0;
 
         String[] numbers = input.split(operatorStrOut);
-        if (numbers.length > 2) {
-            throw new RuntimeException("throws Exception //т.к. формат математической операции не удовлетворяет заданию");
+            if (numbers.length > 2) {
+                throw new RuntimeException("throws Exception //т.к. формат математической операции не удовлетворяет заданию");
         }
-        if (numbers.length == 2) {
-            arg1 = romanConverter(numbers[0]);
-            arg2 = romanConverter(numbers[1]);
-        } else {
+            if (numbers.length == 2) {
+                arg1 = romanConverter(numbers[0]);
+                arg2 = romanConverter(numbers[1]);
+            } else {
             throw new RuntimeException("throws Exception //т.к. строка не является математической операцией");
         }
 
             if (arg1 == 0 && arg2 == 0) {
-                result = 0;
+                //result = 0;
 
                     arg1 = Integer.parseInt(numbers[0]);
                     arg2 = Integer.parseInt(numbers[1]);
@@ -78,7 +78,7 @@ public class Calculator {
 
                     result = calculate(arg1, arg2, operator);
                     if (result == 0 || result < 0) {
-                        throw new RuntimeException("throws Exception //т.к. результат не может быть отрицательным и не может равнятся нулю");
+                        throw new RuntimeException("throws Exception //т.к. в римской системе нет нуля и отрицательных чисел");
                     }
                     String resultRoman = romanSolution(result);
                     return resultRoman;
